@@ -28,7 +28,8 @@ function myFunction() {
 const allBuyNowButtons = document.getElementsByClassName('panda-btn-buy-now');
 for (let button of allBuyNowButtons) {
   button.addEventListener('click', function (event) {
-    event.target.style.display = 'none';
+    // event.target.style.display = 'none';
+    event.target.parentNode.removeChild(event.target);
   })
 }
 
