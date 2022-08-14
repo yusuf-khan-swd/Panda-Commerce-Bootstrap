@@ -311,6 +311,9 @@
           <div class="col">
             <div class="card h-100 border-0 shadow-lg">
               <img
+                onmouseenter="changeImage()"
+                onmouseleave="removeChange()"
+                id="image"
                 src="./images/bags/bag-3.png"
                 class="card-img-top"
                 alt="..."
@@ -345,13 +348,29 @@
           <form>
             <div class="mb-1">
               <input
+                id="input-field"
+                placeholder="Please type email"
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
             </div>
-            <button type="submit" class="btn panda-btn-buy-now">Submit</button>
+            <button
+              type="ubmit"
+              id="submit-button"
+              disabled
+              class="btn panda-btn-buy-now"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              onclick="myFunction()"
+              class="btn panda-btn-buy-now"
+            >
+              Say Hello
+            </button>
           </form>
         </div>
       </section>
