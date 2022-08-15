@@ -34,7 +34,7 @@ for (let button of allBuyNowButtons) {
 }
 
 
-// Requirement 7: eamil
+// Requirement 7: email
 const submitButton = document.getElementById('submit-button');
 const inputField = document.getElementById('input-field');
 inputField.addEventListener('keyup', function (event) {
@@ -81,4 +81,45 @@ document.getElementById('confirm-password').addEventListener('keyup', function (
   else {
     matchedButton.setAttribute('disabled', 'true');
   }
+});
+
+
+// AddItem
+// const cards = document.getElementsByClassName('card');
+// for (let card of cards) {
+//   card.addEventListener('click', function (event) {
+//     event.target.parentNode.removeChild(event.target);
+//   });
+// }
+
+document.getElementById('shoes-container').addEventListener('click', function (event) {
+  event.target.parentNode.removeChild(event.target);
+})
+
+document.getElementById('btn-add-item').addEventListener('click', function () {
+  const shoes = document.getElementById('shoes');
+  const div = document.createElement('div');
+
+  div.innerHTML = `          <div class="col">
+  <div class="card border border-0 shadow-lg h-100">
+    <img
+      src="./images/shoes/shoe-1.png"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Supply 350</h5>
+      <p class="card-text">
+        This is a longer card with supporting text below as a natural
+        lead-in to additional.
+      </p>
+      <h5>$120</h5>
+    </div>
+    <div class="m-3">
+      <div class="btn panda-btn-buy-now">Buy Now</div>
+    </div>
+  </div>
+</div>`;
+
+  shoes.appendChild(div);
 });
