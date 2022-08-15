@@ -25,7 +25,7 @@ function myFunction() {
 
 
 // Requirement 6: remove buy now button on click
-const allBuyNowButtons = document.getElementsByClassName('panda-btn-buy-now');
+const allBuyNowButtons = document.querySelectorAll('.panda-btn-buy-now');
 for (let button of allBuyNowButtons) {
   button.addEventListener('click', function (event) {
     // event.target.style.display = 'none';
@@ -94,7 +94,7 @@ document.getElementById('confirm-password').addEventListener('keyup', function (
 
 document.getElementById('shoes-container').addEventListener('click', function (event) {
   event.target.parentNode.removeChild(event.target);
-})
+});
 
 document.getElementById('btn-add-item').addEventListener('click', function () {
   const shoes = document.getElementById('shoes');
