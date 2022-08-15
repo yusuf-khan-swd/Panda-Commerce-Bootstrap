@@ -8,7 +8,7 @@ for (let element of elements) {
 
 // Requirement 3
 document.getElementById('backpack').style.backgroundColor = 'tomato';
-// document.getElementById('backpack').style.padding = '2rem';
+document.getElementById('backpack').style.padding = '2rem';
 
 
 // Requirement 4
@@ -66,4 +66,19 @@ function random(number) {
 document.getElementById('subscribe').addEventListener('dblclick', function (event) {
 
   event.target.style.backgroundColor = `rgba(${random(255)}, ${random(255)}, ${random(255)})`;
-})
+});
+
+
+
+
+// Extra
+const matchedButton = document.getElementById('matched');
+const password = document.getElementById('password');
+document.getElementById('confirm-password').addEventListener('keyup', function (event) {
+  if (event.target.value === password.value) {
+    matchedButton.removeAttribute('disabled');
+  }
+  else {
+    matchedButton.setAttribute('disabled', 'true');
+  }
+});
